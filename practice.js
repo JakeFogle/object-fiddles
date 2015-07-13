@@ -10,6 +10,7 @@ var me = {
 
 alert(me.name);
 
+
 //Problem 2
 //Make a 'favoriteThings' object that contains the following keys: band, food, person, book, movie, holiday. Have the values to those keys be your favorite thing in that category.
 
@@ -32,6 +33,7 @@ favoriteThings.brand = "Nike";
 favoriteThings.food = "Lettuce";
 favoriteThings.book = "50 Shades Of Gray";
 console.log(favoriteThings);
+
 
 //Problem 3
 /*Create an empty Object called backPack. Now, create a variable called 'item'
@@ -59,54 +61,65 @@ Instead, console.log your whole backPack object and then check out the console. 
 
 console.log(backPack);
 
+
 //Problem 4
 //Create another 'me' object with the following properties name, age, height, gender, married, eyeColor, hairColor. Fill those properties in with the appropriate values.
 
-  //Code Here
+var me = {
+  name: "Jake",
+  age: 24,
+  height: "6'",
+  gender: "Male",
+  married: "No",
+  eyeColor: "Hazel"
+}
 
 //Now, loop through your object and alert every value. *Tyler --> 24 --> 6'0 --> Male, etc etc
 
-  //Code Here
+for (var x in me) {
+  alert(me[x]);
+}
 
 
-
-
-//NEXT PROBLEM
-
-
-
-
+//Problem 5
 //Create an Object called 'album' with 5 keys named different song titles that you make up, with the values being the length of each song.
 
-  //Code Here
+var album = {
+  So_Good: "3:32",
+  The_Kids: "3:39",
+  Airplanes: "2:58",
+  Ill_Be_In_The_Sky: "4:05",
+  Dont_Let_Me_Fall: "3:55"
+}
 
 //Now, loop through your album object alerting every song title individually.
 
-  //Code Here
+for (var x in album) {
+  alert(x);
+}
 
 
-
-
-//NEXT PROBLEM
-
-
-
-
+//Problem 6
 //Create an object called states that has 5 US states as properties with the values being their population (doesn't have to be accurate).
 
-  //Code Here
+var states = {
+  Oregon: 3970239,
+  Washington: 7061530,
+  Rhode_Island: 25173,
+  South_Dakota: 853175,
+  Hawaii: 19782
+}
 
 //Now, loop through your states object and if the states population is greater than 30K, alert that state.
 
-  //Code Here
+for (var x in states) {
+  if (states[x] > 30000) {
+    alert(x);
+  }
+}
 
 
-
-
-//NEXT PROBLEM
-
-
-
+//Problem 7
 
 var user = {
     name: 'Tyler McGinnis',
@@ -119,19 +132,22 @@ var user = {
 /*Above you're given a user object. Loop through the user object checking to make sure
 that each value is truthy. If it's not truthy, remove it from the object. */
 
-  //Code Here
+for (var x in user) {
+  if(!user[x]) {
+    delete user[x];
+  }
+}
 
 //Once you get your truthy Object, Change the remaining values in the object to be specific to you (name: 'your name', username: 'your username'), rather than my information.
 
-  //Code Here
+user.name = "Jake",
+user.pwHash = "fdasfdsaf",
+user.username = "JakeFogle31"
+
+console.log(user);
 
 
-
-
-//NEXT PROBLEM
-
-
-
+//Problem 8
 
 var user = {
         name: 'Tyler McGinnis',
@@ -147,65 +163,78 @@ var user = {
 //Let's say I, the user, decided to change my name and email address to the following
 // name -> 'Tyler S. McGinnis', email -> 'tyler.mcginnis@devmounta.in'. Make that change.
 
-  //Code Here
+user.name = "Tyler S. McGinnis";
+user.email = "tylermcginnis@devmounta.in";
 
 //Now call the sayName method that's on the user object which will alert the users email
 
-  //Code Here
+user.sayName();
 
 
-
-
-//NEXT PROBLEM
-
-
-
-
+//Problem 9
 //Create an empty object called methodCollection.
 
-  //Code Here
+var methodCollection = {}
 
 /*Now add two methods (functions that are properties on objects) to your methodCollection
 object. One called 'alertHello' which alerts 'hello' and another method called logHello
  which logs 'hello' to the console. */
 
-  //Code Here
+methodCollection.alertHello = function() {
+  alert("hello");
+}
+
+methodCollection.logHello = function() {
+  console.log("hello");
+}
 
 //Now call your alertHello and logHello methods.
 
-  //Code Here
+methodCollection.alertHello();
+methodCollection.logHello();
 
 
-
-//NEXT PROBLEM
-
-
-
+//Problem 10
 // Create a function called MakePerson which takes in name, birthday, ssn as its parameters and returns a new object with all of the information that you passed in.
 
-  //Code Here
+function MakePerson(name, birthday, ssn) {
+  this.name = name;
+  this.birthday = birthday;
+  this.ssn = ssn;
+}
+
+var me = new MakePerson("Jake", "July 9, 1991", 123456789);
 
 
-
-//NEXT PROBLEM
-
-
-
+//Problem 11
 // Create a function called MakeCard which takes in all the data it needs to make a Credit Card object and returns that object so that whenever you invoke MakeCard, you get a brand new credit card.
 
-  //Code Here
-  
-  
-  
-//NEXT PROBLEM
+function MakeCard(fullnum, expire, cvv, address) {
+  this.Credit_Card_Number = fullnum;
+  this.Expiration_Date = expire;
+  this.CVV = cvv;
+  this.Address = address;
+}
 
+var myCard = new MakeCard(43214832, "6/17", 532, "2109 Greene St.");
+  
 
-
+//Problem 12
 /* As of this point you should have a MakePerson and a MakeCard function which returns you either a person or a credit card object.
    Now, create a bindCard function that takes in a person object as its first parameter and a creditcard object as its second parameter.
    Have bindCard merge the two parameters together into a new object which contains all the properties from the person as well as the creditcard.
 */
 
-  //Code Here
+function bindCard(per, car) {
+  var newObj = {};
+  for (var key in per) {
+    newObj[key] = per[key];
+  }
+  for (var key in car) {
+    newObj[key] = car[key]
+  }
+  return newObj;
+}
 
-
+var myInfo = bindCard(me, myCard);
+console.log(myInfo);
