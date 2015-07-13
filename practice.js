@@ -1,39 +1,39 @@
 //Once you complete a problem, open up Chrome and check the answer in the console.
 
-
+//Problem 1
 //Create an object called me. Give it a key of name with the value being your name, and another key of age with the value being your age. Then alert your name using dot notation.
 
-  //Code here
+var me = {
+  name: "Jake",
+  age: 24
+}
 
+alert(me.name);
 
-
-
-//NEXT PROBLEM
-
-
-
-
+//Problem 2
 //Make a 'favoriteThings' object that contains the following keys: band, food, person, book, movie, holiday. Have the values to those keys be your favorite thing in that category.
 
-  //Code here
-
+var favoriteThings = {
+  band: "Chiddy Bang",
+  food: "Cafe Rio",
+  person: "Shy",
+  book: "7 Habits Of Highly Effective People",
+  movie: "We Bought A Zoo",
+  holiday: "Christmas",
+}
 
 //After you've made your object, add another key named 'car' with the value being your favorite car and then another key named 'brand' with the value being your favorite brand.
 
-  //Code here
-
+favoriteThings.car = "Lamborghini Veneno";
+favoriteThings.brand = "Nike";
 
 //Now change the food key in your favoriteThings object to be 'Lettuce' and change the book key in your favoriteThings object to be '50 Shades of Gray'.
 
-  //Code here
+favoriteThings.food = "Lettuce";
+favoriteThings.book = "50 Shades Of Gray";
+console.log(favoriteThings);
 
-
-
-
-//NEXT PROBLEM
-
-
-
+//Problem 3
 /*Create an empty Object called backPack. Now, create a variable called 'item'
 and set it equal to the string 'firstPocket'. Using bracket notation,
 add a 'firstPocket' key (or property) to backPack, using 'item'.
@@ -42,26 +42,24 @@ Set the value of that key to 'chapstick'.
 Using dot notation, add another key (or property) to your backPack object
 that is named color, with the value being the color of your backpack. */
 
-  //Code here
+var backPack = {};
+
+var item = "firstPocket";
+
+backPack[item] = "Chapstick";
+backPack.color = "Blue";
 
 //After you do the above, alert your entire backPack object.
 
-  //Code here
+alert(backPack);
 
 /*You probably noticed that it just alerted [object Object].
 Alerting to see the data in your Object doesn't work so well.
 Instead, console.log your whole backPack object and then check out the console. */
 
-  //Code here
+console.log(backPack);
 
-
-
-
-//NEXT PROBLEM
-
-
-
-
+//Problem 4
 //Create another 'me' object with the following properties name, age, height, gender, married, eyeColor, hairColor. Fill those properties in with the appropriate values.
 
   //Code Here
