@@ -1,7 +1,8 @@
 //Once you complete a problem, open up Chrome and check the answer in the console.
 
 //Problem 1
-//Create an object called me. Give it a key of name with the value being your name, and another key of age with the value being your age. Then alert your name using dot notation.
+//Create an object called me. Give it a key of name with the value being your name, and another key of 
+//age with the value being your age. Then alert your name using dot notation.
 
 var me = {
   name: "Jake",
@@ -12,7 +13,8 @@ alert(me.name);
 
 
 //Problem 2
-//Make a 'favoriteThings' object that contains the following keys: band, food, person, book, movie, holiday. Have the values to those keys be your favorite thing in that category.
+//Make a 'favoriteThings' object that contains the following keys: band, food, person, book, movie, 
+//holiday. Have the values to those keys be your favorite thing in that category.
 
 var favoriteThings = {
   band: "Chiddy Bang",
@@ -23,12 +25,14 @@ var favoriteThings = {
   holiday: "Christmas",
 }
 
-//After you've made your object, add another key named 'car' with the value being your favorite car and then another key named 'brand' with the value being your favorite brand.
+//After you've made your object, add another key named 'car' with the value being your favorite car and 
+//then another key named 'brand' with the value being your favorite brand.
 
 favoriteThings.car = "Lamborghini Veneno";
 favoriteThings.brand = "Nike";
 
-//Now change the food key in your favoriteThings object to be 'Lettuce' and change the book key in your favoriteThings object to be '50 Shades of Gray'.
+//Now change the food key in your favoriteThings object to be 'Lettuce' and change the book key in your 
+//favoriteThings object to be '50 Shades of Gray'.
 
 favoriteThings.food = "Lettuce";
 favoriteThings.book = "50 Shades Of Gray";
@@ -63,7 +67,8 @@ console.log(backPack);
 
 
 //Problem 4
-//Create another 'me' object with the following properties name, age, height, gender, married, eyeColor, hairColor. Fill those properties in with the appropriate values.
+//Create another 'me' object with the following properties name, age, height, gender, married, eyeColor, 
+//hairColor. Fill those properties in with the appropriate values.
 
 var me = {
   name: "Jake",
@@ -82,7 +87,8 @@ for (var x in me) {
 
 
 //Problem 5
-//Create an Object called 'album' with 5 keys named different song titles that you make up, with the values being the length of each song.
+//Create an Object called 'album' with 5 keys named different song titles that you make up, with the 
+//values being the length of each song.
 
 var album = {
   So_Good: "3:32",
@@ -100,7 +106,8 @@ for (var x in album) {
 
 
 //Problem 6
-//Create an object called states that has 5 US states as properties with the values being their population (doesn't have to be accurate).
+//Create an object called states that has 5 US states as properties with the values being their population
+// (doesn't have to be accurate).
 
 var states = {
   Oregon: 3970239,
@@ -138,7 +145,8 @@ for (var x in user) {
   }
 }
 
-//Once you get your truthy Object, Change the remaining values in the object to be specific to you (name: 'your name', username: 'your username'), rather than my information.
+//Once you get your truthy Object, Change the remaining values in the object to be specific to you 
+//(name: 'your name', username: 'your username'), rather than my information.
 
 user.name = "Jake",
 user.pwHash = "fdasfdsaf",
@@ -195,7 +203,8 @@ methodCollection.logHello();
 
 
 //Problem 10
-// Create a function called MakePerson which takes in name, birthday, ssn as its parameters and returns a new object with all of the information that you passed in.
+// Create a function called MakePerson which takes in name, birthday, ssn as its parameters and returns 
+//a new object with all of the information that you passed in.
 
 function MakePerson(name, birthday, ssn) {
   this.name = name;
@@ -207,7 +216,8 @@ var me = new MakePerson("Jake", "July 9, 1991", 123456789);
 
 
 //Problem 11
-// Create a function called MakeCard which takes in all the data it needs to make a Credit Card object and returns that object so that whenever you invoke MakeCard, you get a brand new credit card.
+// Create a function called MakeCard which takes in all the data it needs to make a Credit Card object 
+//and returns that object so that whenever you invoke MakeCard, you get a brand new credit card.
 
 function MakeCard(fullnum, expire, cvv, address) {
   this.Credit_Card_Number = fullnum;
@@ -220,9 +230,10 @@ var myCard = new MakeCard(43214832, "6/17", 532, "2109 Greene St.");
   
 
 //Problem 12
-/* As of this point you should have a MakePerson and a MakeCard function which returns you either a person or a credit card object.
-   Now, create a bindCard function that takes in a person object as its first parameter and a creditcard object as its second parameter.
-   Have bindCard merge the two parameters together into a new object which contains all the properties from the person as well as the creditcard.
+/* As of this point you should have a MakePerson and a MakeCard function which returns you either a person
+   or a credit card object. Now, create a bindCard function that takes in a person object as its first 
+   parameter and a creditcard object as its second parameter. Have bindCard merge the two parameters 
+   together into a new object which contains all the properties from the person as well as the creditcard.
 */
 
 function bindCard(per, car) {
